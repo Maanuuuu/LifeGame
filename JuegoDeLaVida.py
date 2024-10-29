@@ -2,7 +2,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+# Configuración de la cuadrícula
+GRID_SIZE = 50  # Tamaño de la cuadrícula (50x50)
+ON = 1          # Representación de una célula viva
+OFF = 0         # Representación de una célula muerta
 
+def random_grid(size):
+    
+    # Solo el 10% de las células totales estarán vivas
+    return np.random.choice([ON, OFF], size*size, p=[0.2, 0.8]).reshape(size, size)
+
+
+# Inicialización del juego
 def main():
     grid = random_grid(GRID_SIZE)
 
