@@ -8,15 +8,15 @@ def dibujar_triangulo(puntos, color):
     
     for punto in puntos:
         turtle.goto(punto)
-        time.sleep(0.1)  # Retraso para la animación
+        time.sleep(0.1)  
         
-    turtle.goto(puntos[0])  # Regresa al inicio
+    turtle.goto(puntos[0])  
     turtle.end_fill()
 
 def sierpinski(puntos, profundidad):
     """Dibuja el triángulo de Sierpinski recursivamente."""
     if profundidad == 0:
-        dibujar_triangulo(puntos, "blue")  # Dibuja un triángulo sólido
+        dibujar_triangulo(puntos, "blue")  # Se dibuja el triangulo
     else:
         # Calcula los puntos medios
         punto_medio1 = (
@@ -35,37 +35,36 @@ def sierpinski(puntos, profundidad):
         # Llamadas recursivas para los triángulos más pequeños
         sierpinski([puntos[0], punto_medio1, punto_medio3], profundidad - 1)
         
-        # Levanta el lápiz antes de mover a la siguiente posición
+        
         turtle.penup()
-        turtle.goto(puntos[1])  # Mueve a la segunda esquina
+        turtle.goto(puntos[1])  
         turtle.pendown()
         
         sierpinski([puntos[1], punto_medio1, punto_medio2], profundidad - 1)
         
-        # Levanta el lápiz antes de mover a la siguiente posición
+       
         turtle.penup()
-        turtle.goto(puntos[2])  # Mueve a la tercera esquina
+        turtle.goto(puntos[2])  
         turtle.pendown()
         
         sierpinski([puntos[2], punto_medio2, punto_medio3], profundidad - 1)
 
 def main():
     """Función principal para configurar la tortuga y dibujar el triángulo."""
-    turtle.speed(0)  # Velocidad más rápida
-    turtle.hideturtle()  # Oculta el cursor
+    turtle.speed(0)  
     
-    # Vértices iniciales del triángulo
+    # Puntos del triángulo inicial
     puntos = [(-200, -150), (0, 200), (200, -150)]
     
-    # Posiciona la tortuga sin dibujar
+    
     turtle.penup()
-    turtle.goto(puntos[0])  # Mueve a la primera esquina
+    turtle.goto(puntos[0])  
     turtle.pendown()
 
     # Dibuja el triángulo de Sierpinski con profundidad 4
     sierpinski(puntos, profundidad=4)
     
-    # Finaliza la animación y espera a que se cierre la ventana
+    
     turtle.done()
 
 if __name__ == "__main__":
