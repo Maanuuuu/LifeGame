@@ -1,5 +1,5 @@
 import turtle
-import time
+
 
 def dibujar_triangulo(puntos, color):
     """Dibuja un triángulo con los puntos dados y el color especificado."""
@@ -8,7 +8,7 @@ def dibujar_triangulo(puntos, color):
     
     for punto in puntos:
         turtle.goto(punto)
-        time.sleep(0.1)  
+        
         
     turtle.goto(puntos[0])  
     turtle.end_fill()

@@ -35,4 +35,4 @@ Para ejecutar el juego, sigue estos pasos:
 
 2. Instala las librerias Numpy, Matplotlib, Time, Turtle
    ```bash
-   pip install numpy matplotlib time turtle
+   pip install numpy matplotlib  turtle
