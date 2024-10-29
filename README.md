@@ -24,7 +24,7 @@ El Juego de la Vida se basa en una cuadrícula bidimensional de células, donde 
 
 ## Requisitos
 - Python 3.8 o superior
-- Biblioteca `turtle` para la visualización gráfica
+- Biblioteca `turtle`, `matplotlib`, `numpy`  para los calculos y visualización gráfica
 
 ## Instalación
 Para ejecutar el juego, sigue estos pasos:
@@ -35,4 +35,4 @@ Para ejecutar el juego, sigue estos pasos:
 
 2. Instala las librerias Numpy, Matplotlib, Time, Turtle
    ```bash
-   pip install numpy matplotlib  turtle
+   pip install numpy matplotlib turtle
