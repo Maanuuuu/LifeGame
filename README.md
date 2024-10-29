@@ -31,4 +31,8 @@ Para ejecutar el juego, sigue estos pasos:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/LifeGame.git
+   git clone https://github.com/Maanuuuu/LifeGame
+
+2. Instala las librerias Numpy, Matplotlib, Time, Turtle
+   ```bash
+   pip install numpy matplotlib time turtle
